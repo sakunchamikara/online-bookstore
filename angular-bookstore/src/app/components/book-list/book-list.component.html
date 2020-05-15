@@ -1,0 +1,21 @@
+<p>book-list works!</p>
+<table border="1">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>
+        <img [src]="book.imageUrl" height="50"/>
+      </td>
+      <td>{{book.name}}</td>
+      <td>{{book.description}}</td>
+      <td>{{book.unitPrice | currency: 'LKR'}}</td>
+    </tr>
+  </tbody>
+</table>
